@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,11 +16,14 @@
                 {{ item }}
             </li>
         </ul>
+        <textarea v-model="message" class="form-control" id="exampleTextarea" rows="3"></textarea>
+        <p>{{ message }}</p>
     </div>
     <script>
         new Vue({
             el: '#app',
             data: {
+                message: 'Type stuff here',
                 items: [
                     'thingie',
                     'another thingie',
